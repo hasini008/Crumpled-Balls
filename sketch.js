@@ -21,8 +21,8 @@ function setup() {
 
     ground = new Ground();
 
-boxPosition=width/2-100
- 	boxY=610;
+boxPosition=width/2-90
+ 	boxY=600;
 
 
  	boxleftSprite=createSprite(boxPosition, boxY, 20,100);
