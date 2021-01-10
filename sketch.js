@@ -18,8 +18,6 @@ function setup() {
 	world = engine.world;
     
 	paper = new Shelf();
-	
-	dustbin = new Dustbin();
 
     ground = new Ground();
 
@@ -56,8 +54,6 @@ function draw() {
   engine.Update(Engine);
 
   paper.display();
-
-  dustbin.display();
 
   ground.display();
 
