@@ -2,7 +2,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-var Engine;
+var AiEngine;
 var aiWorld;
 var paper , ground , dustbin;
 
@@ -14,7 +14,7 @@ function setup() {
 	createCanvas(800, 700);
 
 
-	engine = Engine.create();
+	engine = AiEngine.create();
 	world = engine.world;
     
 	paper = new Shelf();
@@ -43,7 +43,7 @@ boxPosition=width/2-90
  	boxRightBody = Bodies.rectangle(boxPosition+200-20 , boxY, 20,100 , {isStatic:true} );
  	World.add(world, boxRightBody);
 
-	Engine.run(engine);
+	AiEngine.run(engine);
   
 }
 
@@ -51,7 +51,7 @@ boxPosition=width/2-90
 function draw() {
   background("light green");
 
-  engine.Update(Engine);
+  engine.Update(AiEngine);
 
   paper.display();
 
@@ -65,7 +65,7 @@ function draw() {
 function keyPressed() {
 
   if(keyCode === UP_ARROW){
-   Matter.Body.applyForce( paperObject.body , paperObject.body.position , {x = 98 , y = 280} );
+   Matter.Body.applyForce( paperObject.body , paperObject.body.position , {x:98 , y:280} );
   }
 }
 
