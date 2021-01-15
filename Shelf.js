@@ -7,14 +7,14 @@ class Shelf{
         friction : 0.5 , 
         density : 1.2
 
-        Matter.Bodies.circle(  -25 , 300 , 50 ,  paper_props)
+        Matter.Bodies.circle(  25 , 300 , 50 ,  paper_props)
         World.add(aiWorld , this.ball);
       }  
       
          display() {
-          circleMode(CENTER);
+          ellipseMode(CENTER);
           fill("violet");
-        circle(-25 , 300 , 50)
+        circle(25 , 300 , 50)
          }
       }
 }
